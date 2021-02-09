@@ -6,6 +6,10 @@ scrape_configs:
   - job_name: 'prometheus'
     static_configs:
     - targets: ['localhost:9090']
+  - job_name: "ispmonitor"
+    scrape_interval: 60s
+    static_configs:
+      - targets: ["172.17.0.4:9283"]
   - job_name: 'blackbox'
     metrics_path: /probe
     params:

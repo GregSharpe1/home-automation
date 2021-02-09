@@ -9,8 +9,10 @@
 * Running grafana (Same as above)
 * Running prometheus - `docker run --name=prometheus -p 9090:90909 -v $PWD/prometheus:/config prom/prometheus --config.file /config/prometheus.yml`
 * Running Blackbox exporter - `docker run --name=blackbox -p 9115:9115 -v $PWD/blackbox:/config prom/blackbox-exporter`
+* Running Telegraf - `docker run --name telegraf -p 9283:9283 -v $PWD/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro telegraf`
 
 ## Resources used
 
 * Taken and tweaked from https://gonzalo123.com/2018/11/26/monitoring-the-bandwidth-with-grafana-influxdb-and-docker/
 * Prom with Blackbox exporter - https://geekflare.com/monitor-website-with-blackbox-prometheus-grafana/
+* A bit more Network monitoring - https://mrkaran.dev/posts/isp-monitoring/
